@@ -4,13 +4,14 @@ import { EventsPage } from './pages/EventsPage';
 import { EventDetailPage } from './pages/EventDetailPage';
 import { LoginPage } from './pages/LoginPage';
 import { RegistrationPage } from './pages/RegistrationPage';
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
+import { AdminLayout } from './components/admin/AdminLayout';
 import { AdminDashboard } from './pages/AdminDashboard';
 import { EventManagement } from './pages/admin/EventManagement';
 import { UserManagement } from './pages/admin/UserManagement';
 import { Reports } from './pages/admin/Reports';
 import { Settings } from './pages/admin/Settings';
-import { AboutPage } from './pages/AboutPage';
-import { ContactPage } from './pages/ContactPage';
 
 function App() {
   return (
@@ -23,11 +24,15 @@ function App() {
         <Route path="/register" element={<RegistrationPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/admin/events" element={<EventManagement />} />
-        <Route path="/admin/users" element={<UserManagement />} />
-        <Route path="/admin/reports" element={<Reports />} />
-        <Route path="/admin/settings" element={<Settings />} />
+        
+        {/* Admin routes */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminDashboard />} />
+          <Route path="events" element={<EventManagement />} />
+          <Route path="users" element={<UserManagement />} />
+          <Route path="reports" element={<Reports />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
