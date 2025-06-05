@@ -9,6 +9,8 @@ import { EventManagement } from './pages/admin/EventManagement';
 import { UserManagement } from './pages/admin/UserManagement';
 import { Reports } from './pages/admin/Reports';
 import { Settings } from './pages/admin/Settings';
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/events/:id" element={<EventDetailPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegistrationPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/events" element={<EventManagement />} />
         <Route path="/admin/users" element={<UserManagement />} />
