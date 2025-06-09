@@ -161,7 +161,7 @@ export const HomePage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {Object.entries(eventsByCategory).map(([category, event]) => (
                 event && (
-                  <Link to={`/events?category=${category}`} key={category} className="block group">
+                  <Link to={`/events/category/${category}`} key={category} className="block group">
                     <div className="relative rounded-lg overflow-hidden h-60">
                       <img
                         src={event.image}
