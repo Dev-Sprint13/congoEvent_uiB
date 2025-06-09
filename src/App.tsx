@@ -6,6 +6,8 @@ import { LoginPage } from './pages/LoginPage';
 import { RegistrationPage } from './pages/RegistrationPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { BecomeOrganizerPage } from './pages/BecomeOrganizerPage';
+import { LearnMorePage } from './pages/LearnMorePage';
 import { AdminLayout } from './components/admin/AdminLayout';
 import { AdminDashboard } from './pages/AdminDashboard';
 import { EventManagement } from './pages/admin/EventManagement';
@@ -24,6 +26,8 @@ function App() {
         <Route path="/register" element={<RegistrationPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/become-organizer" element={<BecomeOrganizerPage />} />
+        <Route path="/learn-more" element={<LearnMorePage />} />
         
         {/* Admin routes */}
         <Route path="/admin" element={<AdminLayout />}>

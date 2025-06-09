@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import { Navbar } from '../components/ui/Navbar';
 import { Footer } from '../components/ui/Footer';
@@ -212,19 +210,23 @@ export const HomePage: React.FC = () => {
                 : 'Join our platform to promote your event and reach a wider audience passionate about Congolese culture.'}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button
-                variant="secondary"
-                size="lg"
-              >
-                {language === 'fr' ? 'Devenir Organisateur' : 'Become an Organizer'}
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-green-600"
-              >
-                {language === 'fr' ? 'En savoir plus' : 'Learn More'}
-              </Button>
+              <Link to="/become-organizer">
+                <Button
+                  variant="secondary"
+                  size="lg"
+                >
+                  {language === 'fr' ? 'Devenir Organisateur' : 'Become an Organizer'}
+                </Button>
+              </Link>
+              <Link to="/learn-more">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-green-600"
+                >
+                  {language === 'fr' ? 'En savoir plus' : 'Learn More'}
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
