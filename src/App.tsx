@@ -16,6 +16,14 @@ import { UserManagement } from './pages/admin/UserManagement';
 import { Reports } from './pages/admin/Reports';
 import { Settings } from './pages/admin/Settings';
 
+// Organizer components
+import { OrganizerLayout } from './components/organizer/OrganizerLayout';
+import { OrganizerDashboard } from './pages/organizer/OrganizerDashboard';
+import { MyEvents } from './pages/organizer/MyEvents';
+import { CreateEvent } from './pages/organizer/CreateEvent';
+import { Participants } from './pages/organizer/Participants';
+import { Promotion } from './pages/organizer/Promotion';
+
 function App() {
   return (
     <BrowserRouter>
@@ -38,6 +46,18 @@ function App() {
           <Route path="users" element={<UserManagement />} />
           <Route path="reports" element={<Reports />} />
           <Route path="settings" element={<Settings />} />
+        </Route>
+
+        {/* Organizer routes */}
+        <Route path="/organizer" element={<OrganizerLayout />}>
+          <Route index element={<OrganizerDashboard />} />
+          <Route path="events" element={<MyEvents />} />
+          <Route path="create-event" element={<CreateEvent />} />
+          <Route path="participants" element={<Participants />} />
+          <Route path="promotion" element={<Promotion />} />
+          <Route path="analytics" element={<div>Analytics Page (Coming Soon)</div>} />
+          <Route path="revenue" element={<div>Revenue Page (Coming Soon)</div>} />
+          <Route path="settings" element={<div>Organizer Settings (Coming Soon)</div>} />
         </Route>
       </Routes>
     </BrowserRouter>
